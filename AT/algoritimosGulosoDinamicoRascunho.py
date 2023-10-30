@@ -20,10 +20,16 @@ def calcular_troco_guloso(valor_total_de_troco_a_receber, lista_de_valores_dipon
             # Isso nos ajuda a manter o registro de quanto ainda precisamos dar troco.
             valor_total_de_troco_a_receber -= moeda
             quantidade_moedas += 1
-            moedas_selecionadas.append(moeda) 
+            moedas_selecionadas.append(moeda)
+
     # Esta é uma expressão condicional. Se o valor_total_de_troco_a_receber é 0, 
     # significa que conseguimos dar o troco completo e retornamos a quantidade_moedas e moedas_selecionadas. 
-    # Se não, retornamos None e uma lista vazia, indicando que não foi possível dar o troco com as moedas disponíveis.        
+    # Se não, retornamos None e uma lista vazia, indicando que não foi possível dar o troco com as moedas disponíveis.
+    #         
+    # >>> Complexidade do algoritimo: O (lista_de_valores_diponiveis_de_moedas * valor_total_de_troco_a_receber) = O(n * m)
+    # A complexidade do tempo no pior caso (maior número de vezes que uma moeda pode ser subtraída do troco. 
+    # Isso é, o valor do troco dividido pela menor moeda disponível, que seria 1.).
+    # Enquanto que no "melhor caso" geral, seria O(1) = O(n), o loop externo rodaria apenas uma unica vez a depender do valor do troco.
     return (quantidade_moedas, moedas_selecionadas) if valor_total_de_troco_a_receber == 0 else (None, [])
 
 lista_moedas = [1, 5, 10, 21, 25]
@@ -60,8 +66,12 @@ def calcular_troco_programacao_dinamica(valor_total_de_troco_a_receber, lista_de
         # valor i - moeda. Esse valor anterior já foi calculado em uma iteração anterior e armazenado em troco_min.
         # Para cada iteração do loop externo, o loop interno será executado 5 vezes.
         # Ou seja, Número total de iterações = 37 (do loop externo) * 5 (do loop interno)
-        # A complexidade de O(loop Externo * loopInterno) = 
-        #  >>> O(valor_total_de_troco_a_receber * lista_de_valores_diponiveis_de_moedas)
+        # 
+        # >>> A Complexidade explicada:
+        #  O(valor_total_de_troco_a_receber * lista_de_valores_diponiveis_de_moedas)
+        # *** Na programação dinâmica em termos de complexidade de tempo, 
+        # o melhor cenário continua sendo O(loop Externo * loopInterno) = O(valor_total_de_troco_a_receber * lista_de_valores_diponiveis_de_moedas), 
+        # porque a estrutura do problema e do algoritmo exige a avaliação completa da matriz.
         for moeda in lista_de_valores_diponiveis_de_moedas:
 
                 # Calculando o Sub-resultado >> Verificação de Utilização da Moeda:
