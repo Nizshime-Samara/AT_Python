@@ -1,5 +1,6 @@
 import random
-# >>> Objetivo:
+''' DESCRIÇÃO DO ALGORÍTIMO Genético:
+ >>> Objetivo:
 # A lógica é criar uma população de indivíduos, avaliar sua aptidão, 
 # selecionar os melhores, cruzá-los para produzir novos indivíduos e, ocasionalmente, 
 # mutar alguns genes para introduzir variação genética.
@@ -13,17 +14,18 @@ import random
 # 5 - Alguns dos novos indivíduos sofrem mutação.
 # 6 - A nova população é formada pelos melhores indivíduos da geração anterior e pelos novos indivíduos produzidos.
 #
-# >>> Sobre a Técnica :
+ >>> Sobre a Técnica :
 # A técnica utilizada é o Algoritmo Genético, 
 # que é uma técnica de busca heurística inspirada no processo de seleção natural. 
 # Eles são usados para encontrar soluções aproximadas para problemas de otimização e busca.
 #
-# >>> Complexidade :
+ >>> Complexidade :
 #  O(g *(p log p)) ou O(g *p log p) expressa que, 
 # à medida que tanto o número de gerações (g) quanto o tamanho da população (p) crescem, 
 # o tempo de execução do algoritmo crescerá proporcionalmente ao produto de 
 # g pelo tamanho da população multiplicado pelo logaritmo do tamanho da população. 
 
+'''
 ##########################################################################################
 
 # A aptidao é o resultado da soma dos genes de cada individuo, 

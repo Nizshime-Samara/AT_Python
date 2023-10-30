@@ -16,6 +16,7 @@ Problemas NP (Não-Determinísticos Polinomiais):
 Problemas em NP são aqueles para os quais, dado um candidato a solução, você pode verificar a validade da solução em tempo polinomial. 
 No entanto, encontrar a solução em si pode não ser tão eficiente.
 Em programação, problemas em NP geralmente envolvem encontrar soluções que podem ser verificadas rapidamente.
+
 Exemplo: O problema de encontrar um conjunto de números que some a um valor específico (Subset Sum). 
 Dado um conjunto de números e um valor, verificar se existe um subconjunto cuja soma seja igual ao valor é rápido, mas encontrar esse subconjunto é mais desafiador.
 
@@ -23,6 +24,7 @@ Problemas NP-Completos (Não-Determinísticos Polinomiais Completos):
 Problemas NP-completos são uma classe especial de problemas em NP que são considerados entre os mais difíceis. Não se sabe se é possível encontrar soluções eficientes 
 (tempo polinomial) para eles.
 Em programação, esses problemas são notoriamente difíceis de resolver e muitas vezes requerem abordagens heurísticas.
+
 Exemplo: O Problema do Caixeiro Viajante, onde você deve encontrar a rota mais curta que visite um conjunto de cidades exatamente uma vez e retorne ao ponto de partida.
 Não existe um algoritmo conhecido que resolva todos os casos em tempo polinomial.
 
